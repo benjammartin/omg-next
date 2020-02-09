@@ -18,7 +18,11 @@ const MyApp = ({ Component, pageProps, props }) => {
 
 MyApp.getInitialProps = async (ctx) => {
   const res = await getDocumentByUID({ type:'layout', uid:'main-menu'})
-  return { props: { menu: res } };
+  const { data : {body, footer, logo} } = res;
+  return { props: {
+    menu: body, 
+    footer:footer 
+  } };
 }
 
 

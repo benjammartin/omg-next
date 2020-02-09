@@ -1,13 +1,17 @@
 import React, { useContext } from 'react'
 import AppContext from '../../../contexts/AppContext'
+import Link from 'next/link';
 
 
 const Naviguation = () => {
   const NavContext = useContext(AppContext);
   const { menu } = NavContext || {}; 
-  const { data } = menu || {};
-  const { body } = data || {};
-  return null
+  const [ data ] = [...menu]
+  return (
+    <div className="main-naviguation">
+      {data.items.map(({item}) => <Link key={item.uid} href="/[uid]" as={`/${item.uid}`}><h2>{item.uid}</h2></Link>)}
+    </div>
+  )
 }
 
 export default Naviguation

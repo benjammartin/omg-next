@@ -40,7 +40,6 @@ export const getDocumentById = async (id, options, request) => {
 export const getDocumentByUID = async (query, request) => {
   try {
     const res = await client(request).getByUID(query.type, query.uid)
-    console.log(res)
     return res
   } catch (error) {
     console.log("err", error)

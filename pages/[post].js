@@ -1,8 +1,6 @@
-import {
-    getDocumentFromAPI, getDocumentByUID
-  } from "../api/prismic";
+import { getDocumentByUID } from "../api/prismic";
   
-  const Post = ({post}) => {
+  const Post = ({ post }) => {
     return <div>{post.first_publication_date}</div>
   }
   

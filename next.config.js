@@ -1,5 +1,12 @@
 const withSass = require('@zeit/next-sass')
 
 module.exports = withSass({
-  /* config options here */
+  experimental: {
+    async rewrites() {
+      console.log('ok')
+      return [
+        { source: '/:uid', destination: '/category/:uid' }
+      ];
+    },
+  },
 })
