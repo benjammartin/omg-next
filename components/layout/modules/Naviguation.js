@@ -4,7 +4,9 @@ import AppContext from '../../../contexts/AppContext'
 
 const Naviguation = () => {
   const NavContext = useContext(AppContext);
-  console.log(NavContext)
+  const { menu } = NavContext || {}; 
+  const { data } = menu || {};
+  const { body } = data || {};
   return null
 }
 
