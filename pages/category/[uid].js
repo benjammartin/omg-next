@@ -6,7 +6,6 @@ import { getDocumentByUID } from "../../api/prismic";
   
   
   export const unstable_getStaticProps = async ({ params }) => {
-    console.log(params)
     const { uid } = params;
     const res = await getDocumentByUID({ type:'category', uid:uid})
     return { props: { category: res } };

@@ -9,7 +9,7 @@ const Naviguation = () => {
   const [ data ] = [...menu]
   return (
     <div className="main-naviguation">
-      {data.items.map(({item}) => <Link key={item.uid} href="/[uid]" as={`/${item.uid}`}><h2>{item.uid}</h2></Link>)}
+      {data.items.map(({item}) => <Link key={item.uid} href="/category/[uid]" as={`/category/${item.uid}`}><h2>{item.uid}</h2></Link>)}
     </div>
   )
 }

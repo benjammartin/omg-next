@@ -5,7 +5,7 @@ module.exports = withSass({
     async rewrites() {
       console.log('ok')
       return [
-        { source: '/:uid', destination: '/category/:uid' }
+        { source: '/:uid', destination: '/category/:uid' },
       ];
     },
   },
